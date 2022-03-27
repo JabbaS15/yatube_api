@@ -60,7 +60,7 @@ class Follow(models.Model):
         User,
         verbose_name='Автор',
         on_delete=models.CASCADE,
-        related_name='followings',
+        related_name='following',
     )
 
     class Meta:
