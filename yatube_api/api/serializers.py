@@ -46,7 +46,7 @@ class FollowSerializer(serializers.ModelSerializer):
     )
 
     def validate_following(self, value):
-        """валидатор поля validate_following"""
+        """Валидатор поля validate_following"""
         following = get_object_or_404(User, username=value)
         user = self.context['request'].user
         if user == following:
